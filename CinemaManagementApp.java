@@ -4,9 +4,9 @@ public class CinemaManagementApp {
         config.setCinemaName("Star Wars");
         config.setNumberOfScreens(5);
         config.setOperatingHours("12:00 - 23:00");
-        System.out.println("Cinema Name: " + config.getCinemaName());
+        System.out.println("Name: " + config.getCinemaName());
         System.out.println("Number of Screens: " + config.getNumberOfScreens());
-        System.out.println("Operating Hours: " + config.getOperatingHours());
+        System.out.println("Hours: " + config.getOperatingHours());
 
         MovieFactory regularFactory = new RegularMovieFactory();
         Movie movie = regularFactory.createMovie("Inception");
@@ -19,7 +19,7 @@ public class CinemaManagementApp {
         TicketBooking booking = new TicketBooking.TicketBookingBuilder()
                 .setMovieTitle("Inception")
                 .setSeatNumber("B3")
-                .setSnackCombo("Popcorn and Soda")
+                .setSnackCombo("Popcorn and Cola")
                 .build();
 
         System.out.println("Ticket Booking:");
