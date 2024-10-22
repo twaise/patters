@@ -48,7 +48,7 @@ abstract class RemoteControl {
     public abstract void powerOn();
     public abstract void powerOff();
 }
-class BasicRemote extends RemoteControl {
+class BasicRemote extends RemotesControl {
     public BasicRemote(Device device) {
         super(device);
     }
@@ -64,11 +64,11 @@ class BasicRemote extends RemoteControl {
 public class HomeEntertainmentSystem {
     public static void main(String[] args) {
         Device tv = new TVDevice();
-        RemoteControl remote = new BasicRemote(tv);
+        RemotesControl remote = new BasicRemote(tv);
         remote.powerOn();
         remote.powerOff();
         Device dvd = new DVDDevice();
-        RemoteControl dvdRemote = new BasicRemote(dvd);
+        RemotesControl dvdRemote = new BasicRemote(dvd);
         dvdRemote.powerOn();
     }
 }
